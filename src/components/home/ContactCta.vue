@@ -11,7 +11,7 @@ const props = defineProps({
   githubHref: {
     type: String,
     // ⬇️ Mets ton GitHub ici
-    default: 'https://github.com/ton-github'
+    default: 'https://github.com/Mathbech'
   }
 })
 </script>
