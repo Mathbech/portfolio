@@ -7,7 +7,7 @@ import ProjectCard from './ProjectCard.vue'
   <div>
     <div class="head">
       <h2>Projets mis en avant</h2>
-      <a href="/projects" class="seeall">Tous les projets →</a>
+      <RouterLink to="/projects" class="seeall">Tous les projets →</RouterLink>
     </div>
     <div class="grid">
       <ProjectCard
