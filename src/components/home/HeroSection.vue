@@ -10,8 +10,8 @@ const punchline = 'Je conçois des applications web et mobiles modernes et perfo
     <p class="subtitle">{{ role }}</p>
     <p class="tagline">{{ punchline }}</p>
     <div class="actions">
-      <a href="/projects" class="btn">Voir mes projets</a>
-      <a href="/contact" class="btn btn--ghost">Me contacter</a>
+      <RouterLink to="/projects" class="btn">Voir mes projets</RouterLink>
+      <RouterLink to="/contact" class="btn btn--ghost">Me contacter</RouterLink>
     </div>
   </div>
 </template>

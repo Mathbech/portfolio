@@ -21,7 +21,7 @@ const props = defineProps({
     <h2 id="contact-cta-title">{{ props.line }}</h2>
 
     <div class="actions">
-      <a :href="props.contactHref" class="btn btn--primary">Me contacter</a>
+      <RouterLink :to="props.contactHref" class="btn btn--primary">Me contacter</RouterLink>
 
       <a
         :href="props.githubHref"
