@@ -1,4 +1,6 @@
 @import './base.css';
+@import './projects.css';
+@import './layout.css';
 
 /* Assure que tout prend bien la hauteur dispo */
 html, body, #app {

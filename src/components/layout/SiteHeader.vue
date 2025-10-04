@@ -12,10 +12,3 @@ import { RouterLink } from 'vue-router'
     </nav>
   </header>
 </template>
-
-<style scoped>
-.site-header { background:#111; padding:1rem; }
-nav { display:flex; gap:1rem; }
-a { color:#fff; text-decoration:none; }
-a.router-link-active { text-decoration:underline; }
-</style>
