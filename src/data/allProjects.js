@@ -49,5 +49,12 @@ export const projects = [
     description: "Bot Discord réservé aux événements du support de Multitask Bot.",
     stack: ['Node.js', 'Discord.js', 'MariaDB'],
     image: multitaskEventCover
+  },
+  {
+    id: 'Serveurmail',
+    title: 'Serveur mail',
+    category: 'Personnel',
+    description: "Configuration d'un serveur mail complet avec Postfix, Dovecot.",
+    stack: ['Linux', 'Postfix', 'Dovecot', 'Certbot', "Let's Encrypt"],
   }
 ]
