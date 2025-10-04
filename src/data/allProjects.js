@@ -3,16 +3,17 @@ import itopoCover from '@/assets/images/itopo-cover.png'
 import beaupCover from '@/assets/images/beaup-cover.png'
 import filamentCover from '@/assets/images/filament-cover.png'
 import multitaskCover from '@/assets/images/multitask-cover.png'
+import multitaskEventCover from '@/assets/images/multitask-event-cover.png'
 
 export const projects = [
   {
     id: 'itopo',
     title: 'i-Topo',
     category: 'Entreprise',
-    description: "Application de gestion de chantiers, en production depuis 10 ans. J'ai travaillé sur la partie administrateur et client.",
+    description: "Application de gestion de chantiers, en production depuis 10 ans. Je travaille sur la partie administrateur et client.",
     stack: ['Symfony', 'Twig', 'Flutter', 'MySQL', 'Docker'],
     image: itopoCover,
-    link: 'https://fr.i-topo.com'
+    link: 'https://i-topo.com'
   },
   {
     id: 'beaup',
@@ -21,7 +22,7 @@ export const projects = [
     description: "Projet scolaire de gestion de courses d’orientation avec API Symfony et application mobile Flutter.",
     stack: ['Symfony', 'Twig', 'API Platform', 'Flutter', 'Docker'],
     image: beaupCover,
-    link: '#'
+    link: 'https://github.com/Mathbech/BeaupOrientation-symfony'
   },
   {
     id: 'filament',
@@ -40,5 +41,13 @@ export const projects = [
     stack: ['Node.js', 'Discord.js', 'MariaDB'],
     image: multitaskCover,
     link: 'https://multitask.bebech.fr'
+  },
+  {
+    id: 'multitaskevent',
+    title: 'MultitaskEvent',
+    category: 'Personnel',
+    description: "Bot Discord réservé aux événements du support de Multitask Bot.",
+    stack: ['Node.js', 'Discord.js', 'MariaDB'],
+    image: multitaskEventCover
   }
 ]

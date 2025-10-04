@@ -8,12 +8,17 @@
         <div class="thumb">
           <img :src="project.image" :alt="project.title" />
         </div>
+
         <h2>{{ project.title }}</h2>
         <p>{{ project.description }}</p>
+
         <ul class="stack">
           <li v-for="tech in project.stack" :key="tech">{{ tech }}</li>
         </ul>
-        <a :href="project.link" target="_blank" rel="noopener">Voir plus</a>
+
+        <div v-if="project.link" class="actions">
+          <a :href="project.link" target="_blank" rel="noopener">Voir plus</a>
+        </div>
       </div>
     </div>
   </section>
