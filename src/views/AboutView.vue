@@ -1,7 +1,7 @@
 <script setup>
 import AboutHero from '@/components/about/AboutHero.vue'
 import SkillsList from '@/components/about/SkillsList.vue'
-import Timeline from '@/components/about/Timeline.vue'
+import Timeline from '@/components/about/TimeLine.vue'
 
 const skills = [
   'Symfony / API Platform',
