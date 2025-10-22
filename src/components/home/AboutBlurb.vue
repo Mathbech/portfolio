@@ -1,5 +1,5 @@
 <script setup>
-const text = `Passionné par le développement d’applications utiles et bien pensées, je travaille aujourd’hui chez Lije-Technologies sur i-Topo, une solution de gestion de chantiers utilisée par de nombreux professionnels du BTP.
+const text = `Passionné par le développement d’applications utiles et bien pensées, je travaille aujourd’hui chez Lije-Technologies sur i-Topo, une solution de gestion de chantiers utilisée par de nombreux professionnels du TP.
 J’interviens principalement sur la partie client et contribue à l’évolution de l’interface administrateur pour améliorer l’expérience utilisateur.
 
 Au cours de ma formation, j’ai mené plusieurs projets, dont Beaup’orientation (application de gestion de courses d’orientation, réalisée dans le cadre de mon bachelor) et FilamentGestion, un projet d’études que je fais évoluer dans l’objectif de le commercialiser sous ma propre auto-entreprise.
