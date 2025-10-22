@@ -6,15 +6,10 @@ import Timeline from '@/components/about/TimeLine.vue'
 import { timelineItems } from '@/data/timelineData.js'
 import { sortTimeline } from '@/utils/timeline'
 
+import { skills } from '@/data/competences.js'
+
 const events = sortTimeline(timelineItems, 'desc'); // plus récent en haut
 
-const skills = [
-  'Symfony / API Platform',
-  'Vue.js / Flutter',
-  'Node.js / Discord.js',
-  'AWS (Lightsail, S3, CloudFront)',
-  'MySQL / MariaDB'
-]
 </script>
 
 <template>
