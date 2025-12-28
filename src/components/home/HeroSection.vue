@@ -33,14 +33,14 @@ const punchline = 'Je conçois des applications fiables, claires et utiles, du c
         <span class="dot dot--green" aria-hidden="true"></span>
         <div>
           <p class="panel__label">Approche</p>
-          <p class="panel__value">Livrables clairs, UI soignée, automatisation pragmatique.</p>
+          <p class="panel__value">Sobriété côté design, pipelines auto pour livrer souvent, produits polis et utiles.</p>
         </div>
       </div>
       <div class="panel__item">
         <span class="dot dot--purple" aria-hidden="true"></span>
         <div>
-          <p class="panel__label">Collaboration</p>
-          <p class="panel__value">Feedback rapide et suivi continu.</p>
+          <p class="panel__label">Contexte</p>
+          <p class="panel__value">Actuellement focus sur projets perso, pas de freelance en cours.</p>
         </div>
       </div>
     </div>
