@@ -29,7 +29,7 @@ export const projects = [
     title: 'FilamentGestion',
     category: 'Personnel',
     description: "Application de gestion de stocks pour l'impression 3D, avec suivi des bobines, imprimantes et impressions.",
-    stack: ['Symfony', 'Twig', 'Webpack', 'MariaDB'],
+    stack: ['Symfony', 'Twig', 'Webpack', 'MariaDB', 'Docker'],
     image: filamentCover,
     link: 'https://filamentgestion.fr'
   },
@@ -55,6 +55,7 @@ export const projects = [
     title: 'Serveur mail',
     category: 'Personnel',
     description: "Configuration d'un serveur mail complet avec Postfix, Dovecot.",
-    stack: ['Linux', 'Postfix', 'Dovecot', 'Certbot', "Let's Encrypt"],
+    stack: ['Debian', 'Postfix', 'Dovecot', 'Certbot', "Let's Encrypt"],
+    image: null
   }
 ]

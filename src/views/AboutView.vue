@@ -1,28 +1,21 @@
-<script setup>
+<script setup lang="ts">
 import AboutHero from '@/components/about/AboutHero.vue'
 import SkillsList from '@/components/about/SkillsList.vue'
 import Timeline from '@/components/about/TimeLine.vue'
 
-const skills = [
-  'Symfony / API Platform',
-  'Vue.js / Flutter',
-  'Node.js / Discord.js',
-  'AWS (Lightsail, S3, CloudFront)',
-  'MySQL / MariaDB'
-]
+import { timelineItems } from '@/data/timelineData.js'
+import { sortTimeline } from '@/utils/timeline'
+import { skills } from '@/data/competences.js'
 
-const YEAR_2024_TO_PRESENT = '2024-aujourd\'hui'
-const events = [
-  { year: '2025', title: 'FilamentGestion', desc: 'App de gestion de stocks 3D' },
-  { year: '2024', title: 'Beaup’orientation', desc: 'Courses d’orientation (Symfony + Flutter)' },
-  { year: YEAR_2024_TO_PRESENT, title: 'i‑Topo', desc: 'Évolution back-office & admin' },
-]
+const events = sortTimeline(timelineItems, 'desc')
 </script>
 
 <template>
   <AboutHero
     title="À propos de moi"
-    subtitle="Développeur full‑stack — j’aime les stacks propres, la perf et l’automatisation."
+    :subtitle="`Développeur web & mobile, j’aime concevoir des applications propres, performantes et maintenables.
+    Je mise sur l’automatisation (tests, CI/CD, déploiements) pour livrer vite, bien, et sans surprise.
+    Des outils fiables, clairs et utiles : c’est ça que je vise.`"
   />
 
   <SkillsList :items="skills" />
