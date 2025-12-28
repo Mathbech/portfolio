@@ -1,7 +1,7 @@
 <template>
   <section class="projects">
-    <h1>Mes projets</h1>
-    <p>Voici une sélection de projets professionnels, scolaires et personnels.</p>
+    <h1>Projets réalisés</h1>
+    <p>Voici une sélection de projets réalisés dans les milieux professionnels, scolaires et personnels.</p>
 
     <div class="projects-grid">
       <div v-for="project in projects" :key="project.id" class="project-card">
