@@ -24,14 +24,75 @@ defineProps({
 </template>
 
 <style scoped>
-.card { border: 1px solid #eee; border-radius: .75rem; overflow: hidden; display: grid; grid-template-columns: 1fr 1.2fr; gap: 0; }
-.cover { width: 100%; height: 100%; object-fit: cover; }
-.content { padding: 1rem; }
-.title { margin: 0 0 .25rem; font-size: 1.25rem; }
-.context { font-size: .9rem; opacity: .7; margin-bottom: .4rem; }
-.desc { opacity: .9; }
-.tech { display:flex; gap:.4rem; list-style:none; padding:0; margin:.6rem 0 .9rem; flex-wrap:wrap; }
-.tech li { font-size:.85rem; border:1px solid #ddd; border-radius:.4rem; padding:.2rem .45rem; }
-.btn { display:inline-block; padding:.5rem .8rem; background:#111; color:#fff; border-radius:.5rem; text-decoration:none; }
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 0;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+  transition: transform 0.12s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+  border-color: #cbd5e1;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  background: #e2e8f0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.content {
+  padding: 1rem 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.title { margin: 0; font-size: 1.2rem; font-weight: 700; }
+.context { font-size: .92rem; opacity: .7; margin: 0; }
+.desc { opacity: .9; margin: 0; line-height: 1.55; }
+.tech { display:flex; gap:.45rem; list-style:none; padding:0; margin:.45rem 0 .1rem; flex-wrap:wrap; }
+.tech li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .78rem;
+  border: 1px solid #d7e3f4;
+  border-radius: 999px;
+  padding: .18rem .48rem;
+  background: #f1f5f9;
+  font-weight: 700;
+  color: #0f172a;
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.05);
+}
+
 @media (max-width: 860px) { .card { grid-template-columns: 1fr; } }
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: rgba(15, 23, 42, 0.85);
+    border-color: #1f2937;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  .cover {
+    border-bottom-color: #1f2937;
+  }
+
+  .tech li {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: #1f2937;
+    color: #e2e8f0;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
+  }
+}
 </style>
