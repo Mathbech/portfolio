@@ -16,8 +16,15 @@
           <li v-for="tech in project.stack" :key="tech">{{ tech }}</li>
         </ul>
 
+        <div v-if="project.details" class="actions">
+          <router-link :to="{ name: 'project-details', params: { slug: project.details } }">Voir les
+            détails</router-link>
+        </div>
         <div v-if="project.link" class="actions">
-          <a :href="project.link" target="_blank" rel="noopener">Voir plus</a>
+          <a :href="project.link" target="_blank" rel="noopener noreferrer"
+            :aria-label="project.link.includes('github') ? 'Ouvrir le dépôt GitHub' : 'Ouvrir le site'">
+            {{ project.link.includes('github') ? 'Voir le repo' : 'Voir le site' }}
+          </a>
         </div>
       </div>
     </div>
