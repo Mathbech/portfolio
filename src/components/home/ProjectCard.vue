@@ -65,10 +65,11 @@ defineProps({
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: .78rem;
+  font-size: .75rem;
+  line-height: 1.1;
   border: 1px solid #d7e3f4;
   border-radius: 999px;
-  padding: .18rem .48rem;
+  padding: .12rem .4rem;
   background: #f1f5f9;
   font-weight: 700;
   color: #0f172a;
