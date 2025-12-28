@@ -10,10 +10,11 @@ export const projects = [
     id: 'itopo',
     title: 'i-Topo',
     category: 'Entreprise',
-    description: "Application de gestion de chantiers, en production depuis 10 ans. Je travaille sur la partie administrateur et client.",
+    description: "Application de gestion de chantiers, en production depuis 2014. Je travaille sur la partie administrateur et client.",
     stack: ['Symfony', 'Twig', 'Flutter', 'MySQL', 'Docker'],
     image: itopoCover,
-    link: 'https://i-topo.com'
+    link: 'https://i-topo.com',
+    details: 'itopo'
   },
   {
     id: 'beaup',
@@ -22,7 +23,8 @@ export const projects = [
     description: "Projet scolaire de gestion de courses d’orientation avec API Symfony et application mobile Flutter.",
     stack: ['Symfony', 'Twig', 'API Platform', 'Flutter', 'Docker'],
     image: beaupCover,
-    link: 'https://github.com/Mathbech/BeaupOrientation-symfony'
+    link: 'https://github.com/Mathbech/BeaupOrientation-symfony',
+    details: 'beauporientation'
   },
   {
     id: 'filament',
@@ -31,7 +33,8 @@ export const projects = [
     description: "Application de gestion de stocks pour l'impression 3D, avec suivi des bobines, imprimantes et impressions.",
     stack: ['Symfony', 'Twig', 'Webpack', 'MariaDB', 'Docker'],
     image: filamentCover,
-    link: 'https://filamentgestion.fr'
+    link: 'https://filamentgestion.fr',
+    details: 'filamentgestion'
   },
   {
     id: 'multitask',
@@ -40,7 +43,8 @@ export const projects = [
     description: "Bot Discord multi-fonctions : modération, commandes fun, rôles automatiques, salons vocaux privés, etc.",
     stack: ['Node.js', 'Discord.js', 'MariaDB'],
     image: multitaskCover,
-    link: 'https://multitask.bebech.fr'
+    link: 'https://multitask.bebech.fr',
+    details: 'multitask'
   },
   {
     id: 'multitaskevent',
