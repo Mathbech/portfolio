@@ -20,7 +20,7 @@ const MONTHS_FR: Record<string, number> = {
 
 // retire les diacritiques pour matcher "fevrier"/"février", "aout"/"août"
 function stripDiacritics(s: string) {
-  return s.normalize('NFD').replace(/\p{Diacritic}/gu, '');
+  return s.normalize('NFD').replaceAll(/\p{Diacritic}/gu, '');
 }
 
 function tokenIsPresent(raw: string): boolean {
@@ -94,7 +94,7 @@ function parseYearMonthRange(input: string): Parsed {
     if (ry) end = toAbsMonth(ry, rm ?? 12);
 
     if (!ly && ry) start = toAbsMonth(ry, 1);
-    if (ly && !ry) end = toAbsMonth(ly, lm ? lm : 12);
+    if (ly && !ry) end = toAbsMonth(ly, lm || 12);
 
     if (start === 0 && end === 0) return { start: 0, end: 0 };
     if (start > end) [start, end] = [end, start];
