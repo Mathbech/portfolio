@@ -30,7 +30,7 @@ const props = defineProps<{ items: { year: string; title: string; desc?: string 
   margin-bottom: 1.5rem;
   font-size: 1.75rem;
   font-weight: 700;
-  color: #222;
+  color: #bbbbbb;
 }
 
 ol {
@@ -88,7 +88,7 @@ ol {
 .content h3 {
   font-size: 1.1rem;
   margin: 0;
-  color: #222;
+  color: #dadada;
 }
 
 .content p {
