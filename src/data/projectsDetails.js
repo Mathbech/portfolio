@@ -104,7 +104,8 @@ export const projectsDetails = {
     status: { label: 'Terminé', level: 'done' }, // wip|done|paused|prod
     stack: ['Symfony', 'Twig', 'API Platform', 'Flutter', 'Docker', 'MySQL', 'webpack'],
     links: [
-      { label: 'GitHub', url: '' },
+      { label: 'GitHub web', url: 'https://github.com/Mathbech/BeaupOrientation-symfony' },
+      { label: 'GitHub mobile', url: 'https://github.com/Mathbech/BeaupOrientation-mobile' },
     ],
     sections: [
       {
