@@ -16,7 +16,7 @@ const props = defineProps({
   githubHref: {
     type: String,
     // ton GitHub
-    default: "https://github.com/MathieuBechade"
+    default: "https://github.com/Mathbech"
   },
   // Si tu veux masquer/afficher certains boutons
   showProjects: { type: Boolean, default: true },
@@ -55,7 +55,7 @@ const props = defineProps({
     </div>
 
     <p v-if="props.showContact" class="subtext">
-      Une question ? <RouterLink :to="props.contactHref" class="link">Contact</RouterLink>
+      Une question ? <RouterLink :to="props.contactHref" class="link">Contactez-moi</RouterLink>
     </p>
   </section>
 </template>
@@ -63,19 +63,21 @@ const props = defineProps({
 <style scoped>
 .cta {
   text-align: center;
-  border: 1px solid #eee;
-  border-radius: .75rem;
-  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.6rem;
+  background: linear-gradient(135deg, #ecfeff, #eef2ff);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
 }
 
 h2 {
   margin: 0;
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   line-height: 1.35;
 }
 
 .actions {
-  margin-top: .9rem;
+  margin-top: 1rem;
   display: flex;
   gap: .6rem;
   justify-content: center;
@@ -86,32 +88,35 @@ h2 {
   display: inline-flex;
   align-items: center;
   gap: .45rem;
-  padding: .6rem 1rem;
-  border-radius: .55rem;
+  padding: .65rem 1rem;
+  border-radius: .75rem;
   text-decoration: none;
-  transition: transform .08s ease, background .18s ease, color .18s ease, border-color .18s ease;
-  border: 1px solid transparent;
+  transition: transform .08s ease, background .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease;
+  border: 1px solid #d7dde5;
+  font-weight: 700;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
 }
 
 .btn:active { transform: translateY(1px); }
 
 /* Cohérent avec le bouton bleu du site */
 .btn--primary {
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #fff;
   border-color: #2563eb;
 }
 .btn--primary:hover,
 .btn--primary:focus-visible {
-  background: #3b82f6;
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
   border-color: #3b82f6;
   outline: none;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.2);
 }
 
 .btn--secondary {
   background: transparent;
-  color: #2563eb;
-  border-color: #2563eb;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
 }
 .btn--secondary:hover,
 .btn--secondary:focus-visible {
@@ -123,7 +128,8 @@ h2 {
 
 /* dark mode */
 @media (prefers-color-scheme: dark) {
-  .cta { border-color: #1f2937; background: #0b1220; }
+  .cta { border-color: #1f2937; background: linear-gradient(135deg, rgba(14,165,233,0.12), rgba(37,99,235,0.12)); box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35); }
+  .btn { background: linear-gradient(180deg, #0f172a, #0b1220); color: #e2e8f0; border-color: #1f2937; }
   .btn--secondary { color: #60a5fa; border-color: #334155; }
   .btn--secondary:hover { background: rgba(96,165,250,.08); border-color: #475569; }
 }

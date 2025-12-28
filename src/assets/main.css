@@ -12,21 +12,13 @@ html, body, #app {
 
 /* Layout global : flex pour pousser le footer en bas */
 #app {
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
   min-height: 100vh;   /* prend au moins toute la hauteur */
-  max-width: 1400px;   /* limite sur très grands écrans */
-  margin: 0 auto;      /* centre horizontalement */
-  padding: 0 2rem;     /* marges latérales */
   font-weight: normal;
 }
 
 /* La partie <main> prend toute la place restante */
 main {
-  flex: 1;
-  width: 100%;
+  min-height: calc(100vh - 200px);
 }
 
 /* Liens */
@@ -39,7 +31,7 @@ a, .green {
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: transparent;
   }
 }
 
@@ -47,5 +39,5 @@ a, .green {
 .container {
   max-width: 1200px;   /* largeur “lecture” idéale */
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.25rem;
 }
