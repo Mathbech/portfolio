@@ -16,7 +16,7 @@ const props = defineProps({
   githubHref: {
     type: String,
     // ton GitHub
-    default: "https://github.com/MathieuBechade"
+    default: "https://github.com/Mathbech"
   },
   // Si tu veux masquer/afficher certains boutons
   showProjects: { type: Boolean, default: true },
@@ -55,7 +55,7 @@ const props = defineProps({
     </div>
 
     <p v-if="props.showContact" class="subtext">
-      Une question ? <RouterLink :to="props.contactHref" class="link">Contact</RouterLink>
+      Une question ? <RouterLink :to="props.contactHref" class="link">Contactez-moi</RouterLink>
     </p>
   </section>
 </template>

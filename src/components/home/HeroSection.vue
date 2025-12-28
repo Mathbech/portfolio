@@ -1,6 +1,6 @@
 <script setup>
 const name = 'Mathieu Béchade'
-const role = 'Développeur Fullstack Web & Mobile'
+const role = 'Développeur Web & Mobile'
 const punchline = 'Je conçois des applications fiables, claires et utiles, du concept à la mise en production.'
 </script>
 
