@@ -14,5 +14,5 @@ import SiteFooter from './components/layout/SiteFooter.vue'
 
 <style scoped>
 #layout { min-height: 100vh; display: flex; flex-direction: column; }
-main { flex: 1; padding: 2rem; }
+main { flex: 1; padding: 1.5rem 1rem 2.5rem; }
 </style>

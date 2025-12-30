@@ -1,5 +1,8 @@
 <script setup lang="ts">
-defineProps<{ title: string; subtitle?: string }>()
+defineProps<{
+  title: string,
+  subtitle?: string
+}>()
 </script>
 
 <template>
@@ -10,7 +13,37 @@ defineProps<{ title: string; subtitle?: string }>()
 </template>
 
 <style scoped>
-.hero { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
-h1 { font-size: 2rem; margin-bottom:.5rem; }
-p { color:#555; }
+.hero {
+  max-width: 980px;
+  margin: 2rem auto;
+  padding: 1.4rem 1.6rem;
+  background: linear-gradient(135deg, #ecfeff, #eef2ff);
+  border: 1px solid #e5e7eb;
+  border-radius: 1.1rem;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-bottom: .5rem;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: #475569;
+  line-height: 1.7;
+  white-space: pre-line; /* respecte les retours à la ligne */
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero {
+    background: linear-gradient(135deg, rgba(14,165,233,0.12), rgba(37,99,235,0.12));
+    border-color: #1f2937;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+  }
+
+  p {
+    color: #cbd5e1;
+  }
+}
 </style>
