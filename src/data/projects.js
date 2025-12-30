@@ -13,7 +13,7 @@ export const featuredProjects = [
     tech: ['Symfony', 'Docker', 'MariaDB'],
   },
   {
-    slug: 'i-topo',
+    slug: 'itopo',
     title: 'i-Topo',
     context: 'Projet pro',
     description: 'Application de gestion de chantiers, utilisée par des pros depuis 10+ ans.',
