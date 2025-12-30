@@ -3,7 +3,7 @@ import itopoCover from '@/assets/images/itopo-cover.png'
 import beaupCover from '@/assets/images/beaup-cover.png'
 import filamentCover from '@/assets/images/filament-cover.png'
 import multitaskCover from '@/assets/images/multitask-cover.png'
-import multitaskEventCover from '@/assets/images/multitask-event-cover.png'
+import postfixCover from '@/assets/images/postfix-cover.jpeg'
 
 export const projects = [
   {
@@ -47,19 +47,11 @@ export const projects = [
     details: 'multitask'
   },
   {
-    id: 'multitaskevent',
-    title: 'MultitaskEvent',
-    category: 'Personnel',
-    description: "Bot Discord réservé aux événements du support de Multitask Bot.",
-    stack: ['Node.js', 'Discord.js', 'MariaDB'],
-    image: multitaskEventCover
-  },
-  {
     id: 'Serveurmail',
     title: 'Serveur mail',
     category: 'Personnel',
     description: "Configuration d'un serveur mail complet avec Postfix, Dovecot.",
-    stack: ['Debian', 'Postfix', 'Dovecot', 'Certbot', "Let's Encrypt"],
-    image: null
+    stack: ['Debian', 'Postfix', 'Dovecot', 'Certbot', "Let's Encrypt", "mariadb"],
+    image: postfixCover
   }
 ]
