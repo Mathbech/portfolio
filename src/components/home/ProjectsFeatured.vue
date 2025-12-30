@@ -16,6 +16,7 @@ import ProjectCard from './ProjectCard.vue'
       <ProjectCard
         v-for="p in featuredProjects"
         :key="p.slug"
+        :slug="p.slug"
         :title="p.title"
         :description="p.description"
         :context="p.context"

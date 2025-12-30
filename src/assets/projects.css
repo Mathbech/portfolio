@@ -56,6 +56,16 @@
   gap: 0.4rem;
 }
 
+.project-card.clickable {
+  cursor: pointer;
+}
+
+.project-card.clickable:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+  box-shadow: 0 18px 36px rgba(37, 99, 235, 0.16);
+}
+
 .project-card:hover {
   transform: translateY(-3px);
   border-color: #cbd5e1;
@@ -160,5 +170,10 @@
 
   .actions a:hover {
     border-bottom-color: #60a5fa;
+  }
+
+  .project-card.clickable:focus-visible {
+    outline-color: #60a5fa;
+    box-shadow: 0 20px 40px rgba(96, 165, 250, 0.2);
   }
 }
