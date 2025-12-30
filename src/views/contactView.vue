@@ -65,6 +65,9 @@
           <p v-if="filamentGestion.siteUrl" class="highlight-link">
             <a :href="filamentGestion.siteUrl" target="_blank" rel="noopener" class="link">Découvrir le site</a>
           </p>
+          <p v-if="filamentGestion.instagram" class="highlight-link">
+            <a :href="filamentGestion.instagram" target="_blank" rel="noopener" class="link">Suivre sur Instagram</a>
+          </p>
         </article>
       </div>
 

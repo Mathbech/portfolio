@@ -22,4 +22,5 @@ export const filamentGestion = {
     "Suivi des bobines, imprimantes et impressions. Projet en développement (Symfony & Twig). "
   + "Des licences seront proposées à terme.",
   siteUrl: 'https://filamentgestion.fr', // ← mets le bon domaine si différent
+  instagram: 'https://www.instagram.com/filamentgestion/',
 };
