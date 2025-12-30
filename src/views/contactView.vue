@@ -4,11 +4,11 @@
       <header class="hero" aria-label="Présentation de la page de contact">
         <div class="hero-text">
           <p class="eyebrow">Contact</p>
-          <h1>Un échange clair, rapide.</h1>
-          <p class="subtitle">Envoie-moi quelques lignes de contexte et j'ébauche une réponse sous 24–48 h ouvrées.</p>
+          <h1>Un échange direct.</h1>
+          <p class="subtitle">Je ne fais pas de missions freelance. Pour un retour sur mes projets, une opportunité salariée ou un échange produit, partage quelques lignes de contexte et je réponds sous 24–48 h ouvrées.</p>
           <div class="hero-meta">
             <span class="pill">E-mail prioritaire</span>
-            <span class="pill">Réseaux ouverts</span>
+            <span class="pill">Pas de missions freelance</span>
             <span class="pill">vCard téléchargeable</span>
           </div>
         </div>
@@ -18,7 +18,7 @@
           <p class="panel-email">
             <a :href="`mailto:${email}?subject=${encodeURIComponent(defaultSubject)}`" class="link">{{ email }}</a>
           </p>
-          <p class="panel-note">Un paragraphe sur le besoin suffit pour avancer : projet, contraintes, livrables.</p>
+          <p class="panel-note">Précise si c'est pour un retour, une opportunité salariée ou une collab produit. Pas de missions freelance.</p>
           <div class="hero-links">
             <a :href="links.github" target="_blank" rel="noopener" class="chip">GitHub</a>
             <a :href="links.linkedin" target="_blank" rel="noopener" class="chip">LinkedIn</a>
@@ -36,10 +36,10 @@
         <article class="card">
           <p class="card-kicker">Canal principal</p>
           <h2 class="card-title">E-mail</h2>
-          <p>Pour une demande pro ou un retour sur mes projets, privilégie l'e-mail : je peux répondre avec des détails et des pistes concrètes.</p>
+          <p>Pour un retour sur mes projets, une opportunité salariée ou une collaboration produit, privilégie l'e-mail : je peux répondre avec des détails et des pistes concrètes. Je ne prends pas de missions freelance.</p>
           <ul class="list bullets">
             <li>Réponse en 24–48 h ouvrées</li>
-            <li>Objet prérempli pour aller droit au but</li>
+            <li>Objet prérempli pour cadrer l'échange</li>
             <li>vCard disponible ci-dessus</li>
           </ul>
         </article>
@@ -53,7 +53,7 @@
             <li><a :href="links.linkedin" target="_blank" rel="noopener" class="link">LinkedIn</a></li>
             <li v-if="links.discord"><a :href="links.discord" target="_blank" rel="noopener" class="link">Discord</a></li>
           </ul>
-          <p class="muted">Passe en message privé si tu préfères un échange court avant de basculer sur l'e-mail.</p>
+          <p class="muted">Pour un message court ou un suivi de projet, passe en privé avant de basculer sur l'e-mail. Pas de missions freelance.</p>
         </article>
 
         <!-- Carte FilamentGestion -->
