@@ -18,7 +18,7 @@ const events = sortTimeline(timelineItems, 'desc')
     Des outils fiables, clairs et utiles : c’est ça que je vise.`"
   />
 
+  <Timeline :items="events" />
   <SkillsList :items="skills" />
 
-  <Timeline :items="events" />
 </template>

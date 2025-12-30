@@ -1,12 +1,37 @@
 <script setup lang="ts">
-defineProps<{ items: string[] }>()
+type SkillLevel = 'maitrise' | 'perfectionnement' | 'apprentissage'
+
+type SkillItem = {
+  name: string
+  levels: SkillLevel[]
+}
+
+const levelLabels: Record<SkillLevel, string> = {
+  maitrise: 'Maîtrisé',
+  perfectionnement: 'En perfectionnement',
+  apprentissage: 'En apprentissage'
+}
+
+defineProps<{ items: SkillItem[] }>()
 </script>
 
 <template>
   <section class="skills">
     <h2>Compétences</h2>
     <ul>
-      <li v-for="s in items" :key="s">{{ s }}</li>
+      <li v-for="s in items" :key="s.name">
+        <span class="skill-name">{{ s.name }}</span>
+        <span class="skill-levels">
+          <span
+            v-for="lvl in s.levels"
+            :key="lvl"
+            class="skill-level"
+            :class="`level-${lvl}`"
+          >
+            {{ levelLabels[lvl] }}
+          </span>
+        </span>
+      </li>
     </ul>
   </section>
 </template>
@@ -26,18 +51,58 @@ ul {
   padding: 0;
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0.6rem;
   margin: 0.4rem 0 0;
 }
 
 li {
-  padding: 0.45rem 0.75rem;
-  border-radius: 0.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.75rem;
   border: 1px solid #e2e8f0;
   background: #f8fafc;
-  font-weight: 600;
+}
+
+.skill-name {
+  font-weight: 700;
   color: #0f172a;
+}
+
+.skill-levels {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.skill-level {
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.level-maitrise {
+  background: #d1fae5;
+  color: #065f46;
+  border-color: #34d399;
+}
+
+.level-perfectionnement {
+  background: #fef9c3;
+  color: #854d0e;
+  border-color: #facc15;
+}
+
+.level-apprentissage {
+  background: #e0f2fe;
+  color: #075985;
+  border-color: #38bdf8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,7 +115,28 @@ li {
   li {
     background: rgba(255, 255, 255, 0.04);
     border-color: #1f2937;
+  }
+
+  .skill-name {
     color: #e2e8f0;
+  }
+
+  .level-maitrise {
+    background: rgba(16, 185, 129, 0.14);
+    color: #34d399;
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+
+  .level-perfectionnement {
+    background: rgba(250, 204, 21, 0.14);
+    color: #fbbf24;
+    border-color: rgba(250, 204, 21, 0.35);
+  }
+
+  .level-apprentissage {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border-color: rgba(56, 189, 248, 0.35);
   }
 }
 </style>
