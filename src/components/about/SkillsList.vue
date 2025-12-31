@@ -16,7 +16,7 @@ defineProps<{ items: SkillItem[] }>()
 </script>
 
 <template>
-  <section class="skills">
+  <section class="skills surface-card">
     <h2>Compétences</h2>
     <ul>
       <li v-for="s in items" :key="s.name">
@@ -36,107 +36,4 @@ defineProps<{ items: SkillItem[] }>()
   </section>
 </template>
 
-<style scoped>
-.skills {
-  max-width: 980px;
-  margin: 1.5rem auto;
-  padding: 1.2rem 1.4rem;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid #e5e7eb;
-  border-radius: 1rem;
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  margin: 0.4rem 0 0;
-}
-
-li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.6rem 0.75rem;
-  border-radius: 0.75rem;
-  border: 1px solid #e2e8f0;
-  background: #f8fafc;
-}
-
-.skill-name {
-  font-weight: 700;
-  color: #0f172a;
-}
-
-.skill-levels {
-  display: flex;
-  gap: 0.35rem;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.skill-level {
-  font-size: 0.86rem;
-  font-weight: 600;
-  padding: 0.25rem 0.55rem;
-  border-radius: 999px;
-  border: 1px solid transparent;
-}
-
-.level-maitrise {
-  background: #d1fae5;
-  color: #065f46;
-  border-color: #34d399;
-}
-
-.level-perfectionnement {
-  background: #fef9c3;
-  color: #854d0e;
-  border-color: #facc15;
-}
-
-.level-apprentissage {
-  background: #e0f2fe;
-  color: #075985;
-  border-color: #38bdf8;
-}
-
-@media (prefers-color-scheme: dark) {
-  .skills {
-    background: rgba(15, 23, 42, 0.85);
-    border-color: #1f2937;
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
-  }
-
-  li {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: #1f2937;
-  }
-
-  .skill-name {
-    color: #e2e8f0;
-  }
-
-  .level-maitrise {
-    background: rgba(16, 185, 129, 0.14);
-    color: #34d399;
-    border-color: rgba(16, 185, 129, 0.4);
-  }
-
-  .level-perfectionnement {
-    background: rgba(250, 204, 21, 0.14);
-    color: #fbbf24;
-    border-color: rgba(250, 204, 21, 0.35);
-  }
-
-  .level-apprentissage {
-    background: rgba(56, 189, 248, 0.15);
-    color: #38bdf8;
-    border-color: rgba(56, 189, 248, 0.35);
-  }
-}
-</style>
+<style scoped src="./SkillsList.css"></style>

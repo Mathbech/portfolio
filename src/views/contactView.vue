@@ -27,7 +27,7 @@
         </div>
       </header>
 
-      <div class="quick-actions-surface" aria-label="Actions rapides">
+      <div class="quick-actions-surface surface-card" aria-label="Actions rapides">
         <QuickActions />
       </div>
 
