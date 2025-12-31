@@ -6,7 +6,6 @@ export const projectsDetails = {
     status: { label: 'En cours', level: 'wip' }, // wip|done|paused|prod
     stack: ['Symfony', 'Twig', 'MySQL', 'Webpack', 'Docker'],
     links: [
-      // { label: 'GitHub', url: '...' },
       { label: 'Site vitrine', url: 'https://filamentgestion.fr' },
     ],
 

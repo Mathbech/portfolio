@@ -1,4 +1,5 @@
 @import './base.css';
+@import './shared.css';
 @import './projects.css';
 @import './layout.css';
 
@@ -36,8 +37,4 @@ a, .green {
 }
 
 /* Classe utilitaire : centrer un contenu dans une section */
-.container {
-  max-width: 1200px;   /* largeur “lecture” idéale */
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
+.container { max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; }

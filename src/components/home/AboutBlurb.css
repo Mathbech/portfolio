@@ -1,0 +1,29 @@
+.about {
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+  width: min(100%, 900px);
+  padding: 1.4rem 1.6rem;
+}
+
+.about-card h2 {
+  font-size: 1.55rem;
+  margin: 0 0 0.75rem;
+}
+
+.multiline {
+  white-space: pre-line;
+  line-height: 1.75;
+  opacity: 0.95;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+@media (prefers-color-scheme: dark) {
+  .multiline {
+    color: #e2e8f0;
+    opacity: 0.9;
+  }
+}
