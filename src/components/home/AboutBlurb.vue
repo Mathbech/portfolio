@@ -4,7 +4,7 @@ J’interviens principalement sur la partie client et contribue à l’évolutio
 
 Au cours de ma formation, j’ai mené plusieurs projets, dont Beaup’orientation (application de gestion de courses d’orientation, réalisée dans le cadre de mon bachelor) et FilamentGestion, un projet d’études que je fais évoluer dans l’objectif de le commercialiser sous ma propre auto-entreprise.
 
-Mon objectif : concevoir des outils fiables, intuitifs et réellement utiles aux utilisateurs.`;
+Mon objectif : concevoir des outils fiables, intuitifs et réellement utiles aux utilisateurs.`
 </script>
 
 <template>

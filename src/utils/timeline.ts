@@ -11,9 +11,21 @@ export type Item = { year: string; title: string; desc?: string }
 const PRESENT_SENTINEL = 9999 * 12 + 12
 
 const MONTHS_FR: Record<string, number> = {
-  janvier: 1, fevrier: 2, février: 2, mars: 3, avril: 4, mai: 5, juin: 6,
-  juillet: 7, aout: 8, août: 8, septembre: 9, octobre: 10, novembre: 11,
-  decembre: 12, décembre: 12,
+  janvier: 1,
+  fevrier: 2,
+  février: 2,
+  mars: 3,
+  avril: 4,
+  mai: 5,
+  juin: 6,
+  juillet: 7,
+  aout: 8,
+  août: 8,
+  septembre: 9,
+  octobre: 10,
+  novembre: 11,
+  decembre: 12,
+  décembre: 12,
 }
 
 function stripDiacritics(s: string) {

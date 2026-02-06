@@ -20,5 +20,4 @@ const events = sortTimeline(timelineItems)
 
   <Timeline :items="events" />
   <SkillsList :items="skills" />
-
 </template>

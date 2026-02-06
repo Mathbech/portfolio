@@ -14,6 +14,4 @@ export const skills = [
   { name: 'Apache', levels: ['maitrise'], homeLabel: 'Apache' },
 ]
 
-export const homeSkills = skills
-  .filter((s) => s.homeLabel)
-  .map((s) => ({ label: s.homeLabel }))
+export const homeSkills = skills.filter((s) => s.homeLabel).map((s) => ({ label: s.homeLabel }))

@@ -2,7 +2,7 @@
   max-width: 980px;
   margin: 1.5rem auto;
   padding: 1.2rem 1.4rem;
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+  box-shadow: var(--shadow-sm);
 }
 
 ul {
@@ -21,13 +21,13 @@ li {
   gap: 0.75rem;
   padding: 0.6rem 0.75rem;
   border-radius: 0.75rem;
-  border: 1px solid #e2e8f0;
-  background: #f8fafc;
+  border: 1px solid var(--border-light);
+  background: var(--surface);
 }
 
 .skill-name {
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
 }
 
 .skill-levels {
@@ -46,48 +46,19 @@ li {
 }
 
 .level-maitrise {
-  background: #d1fae5;
-  color: #065f46;
-  border-color: #34d399;
+  background: var(--badge-success-bg);
+  color: var(--badge-success-text);
+  border-color: var(--badge-success-border);
 }
 
 .level-perfectionnement {
-  background: #fef9c3;
-  color: #854d0e;
-  border-color: #facc15;
+  background: var(--badge-warning-bg);
+  color: var(--badge-warning-text);
+  border-color: var(--badge-warning-border);
 }
 
 .level-apprentissage {
-  background: #e0f2fe;
-  color: #075985;
-  border-color: #38bdf8;
-}
-
-@media (prefers-color-scheme: dark) {
-  li {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: #1f2937;
-  }
-
-  .skill-name {
-    color: #e2e8f0;
-  }
-
-  .level-maitrise {
-    background: rgba(16, 185, 129, 0.14);
-    color: #34d399;
-    border-color: rgba(16, 185, 129, 0.4);
-  }
-
-  .level-perfectionnement {
-    background: rgba(250, 204, 21, 0.14);
-    color: #fbbf24;
-    border-color: rgba(250, 204, 21, 0.35);
-  }
-
-  .level-apprentissage {
-    background: rgba(56, 189, 248, 0.15);
-    color: #38bdf8;
-    border-color: rgba(56, 189, 248, 0.35);
-  }
+  background: var(--badge-info-bg);
+  color: var(--badge-info-text);
+  border-color: var(--badge-info-border);
 }

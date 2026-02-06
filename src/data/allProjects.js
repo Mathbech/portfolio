@@ -49,8 +49,7 @@ export const projects = [
     details: 'filamentgestion',
     featured: true,
     featuredTech: ['Symfony', 'Docker', 'MariaDB'],
-    featuredDescription:
-      'Gestion de stocks pour impression 3D — en cours de commercialisation.',
+    featuredDescription: 'Gestion de stocks pour impression 3D — en cours de commercialisation.',
   },
   {
     id: 'multitask',
@@ -71,8 +70,7 @@ export const projects = [
     id: 'Serveurmail',
     title: 'Serveur mail',
     category: 'Personnel',
-    description:
-      "Configuration d'un serveur mail complet avec Postfix, Dovecot.",
+    description: "Configuration d'un serveur mail complet avec Postfix, Dovecot.",
     stack: ['Debian', 'Postfix', 'Dovecot', 'Certbot', "Let's Encrypt", 'mariadb'],
     image: postfixCover,
   },
