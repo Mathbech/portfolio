@@ -32,7 +32,7 @@ const router = createRouter({
       name: 'project-details',
       component: () => import('@/views/ProjectDetailsView.vue'),
       props: true,
-    }
+    },
   ],
 })
 

@@ -25,11 +25,7 @@ const project = computed(() => projectsDetails[slug.value])
     <div class="layout">
       <!-- Colonne principale -->
       <main class="main">
-        <section
-          v-for="s in project.sections"
-          :key="s.title"
-          class="section surface-card"
-        >
+        <section v-for="s in project.sections" :key="s.title" class="section surface-card">
           <h2 class="sectionTitle">{{ s.title }}</h2>
 
           <p v-if="s.content" class="sectionText">

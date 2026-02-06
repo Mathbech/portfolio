@@ -19,11 +19,5 @@
   opacity: 0.95;
   font-size: 1.05rem;
   text-align: justify;
-}
-
-@media (prefers-color-scheme: dark) {
-  .multiline {
-    color: #e2e8f0;
-    opacity: 0.9;
-  }
+  color: var(--text);
 }

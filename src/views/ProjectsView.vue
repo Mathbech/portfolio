@@ -5,7 +5,9 @@
         <p class="eyebrow">Projets</p>
         <div>
           <h1>Projets réalisés</h1>
-          <p class="intro">Sélection de projets réalisés en contexte professionnel, scolaire et personnel.</p>
+          <p class="intro">
+            Sélection de projets réalisés en contexte professionnel, scolaire et personnel.
+          </p>
         </div>
       </header>
 
@@ -54,7 +56,9 @@
               :href="project.link"
               target="_blank"
               rel="noopener noreferrer"
-              :aria-label="project.link.includes('github') ? 'Ouvrir le dépôt GitHub' : 'Ouvrir le site'"
+              :aria-label="
+                project.link.includes('github') ? 'Ouvrir le dépôt GitHub' : 'Ouvrir le site'
+              "
             >
               {{ project.link.includes('github') ? 'Voir le repo' : 'Voir le site' }}
             </a>

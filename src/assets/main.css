@@ -4,30 +4,17 @@
 @import './layout.css';
 
 /* Assure que tout prend bien la hauteur dispo */
-html, body, #app {
+html,
+body,
+#app {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* Layout global : flex pour pousser le footer en bas */
 #app {
-  min-height: 100vh;   /* prend au moins toute la hauteur */
-  font-weight: normal;
-}
-
-/* La partie <main> prend toute la place restante */
-main {
-  min-height: calc(100vh - 200px);
-}
-
-/* Liens */
-a, .green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  min-height: 100vh;
 }
 
 @media (hover: hover) {
@@ -35,6 +22,3 @@ a, .green {
     background-color: transparent;
   }
 }
-
-/* Classe utilitaire : centrer un contenu dans une section */
-.container { max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; }

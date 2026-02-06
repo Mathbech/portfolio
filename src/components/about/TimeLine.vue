@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{ items: { year: string, title: string, desc?: string }[] }>()
+const props = defineProps<{ items: { year: string; title: string; desc?: string }[] }>()
 </script>
 
 <template>

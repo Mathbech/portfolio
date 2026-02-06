@@ -9,7 +9,7 @@ type SkillItem = {
 const levelLabels: Record<SkillLevel, string> = {
   maitrise: 'Maîtrisé',
   perfectionnement: 'En perfectionnement',
-  apprentissage: 'En apprentissage'
+  apprentissage: 'En apprentissage',
 }
 
 defineProps<{ items: SkillItem[] }>()
@@ -22,12 +22,7 @@ defineProps<{ items: SkillItem[] }>()
       <li v-for="s in items" :key="s.name">
         <span class="skill-name">{{ s.name }}</span>
         <span class="skill-levels">
-          <span
-            v-for="lvl in s.levels"
-            :key="lvl"
-            class="skill-level"
-            :class="`level-${lvl}`"
-          >
+          <span v-for="lvl in s.levels" :key="lvl" class="skill-level" :class="`level-${lvl}`">
             {{ levelLabels[lvl] }}
           </span>
         </span>

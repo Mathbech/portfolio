@@ -24,8 +24,16 @@ const year = new Date().getFullYear()
 
       <div class="footer-meta">
         <div class="footer-social">
-          <a :href="links.github" target="_blank" rel="noopener" aria-label="GitHub (nouvel onglet)">GitHub</a>
-          <a :href="links.linkedin" target="_blank" rel="noopener" aria-label="LinkedIn (nouvel onglet)">LinkedIn</a>
+          <a :href="links.github" target="_blank" rel="noopener" aria-label="GitHub (nouvel onglet)"
+            >GitHub</a
+          >
+          <a
+            :href="links.linkedin"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn (nouvel onglet)"
+            >LinkedIn</a
+          >
         </div>
         <p class="footer-copy">© {{ year }} Bebech</p>
       </div>

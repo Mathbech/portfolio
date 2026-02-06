@@ -36,7 +36,6 @@ const goToDetails = () => {
       <ul class="tech">
         <li v-for="t in props.tech" :key="t">{{ t }}</li>
       </ul>
-      <!-- <a class="btn" :href="`/projects/${title}`">Voir le projet</a> -->
     </div>
   </article>
 </template>
