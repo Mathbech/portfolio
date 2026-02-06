@@ -62,32 +62,26 @@
 }
 
 .btn.primary,
-.btn--primary,
-.btn-primary {
+.btn--primary {
   background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #f8fafc;
   border-color: #2563eb;
 }
 
 .btn.primary:hover,
-.btn--primary:hover,
-.btn-primary:hover {
+.btn--primary:hover {
   background: linear-gradient(135deg, #1d4ed8, #1e40af);
 }
 
 .btn.ghost,
-.btn--ghost,
-.btn--secondary,
-.btn-secondary {
+.btn--secondary {
   background: transparent;
   color: #1d4ed8;
   border-color: #bfdbfe;
 }
 
 .btn.ghost:hover,
-.btn--ghost:hover,
-.btn--secondary:hover,
-.btn-secondary:hover {
+.btn--secondary:hover {
   background: rgba(37, 99, 235, 0.08);
 }
 
@@ -112,17 +106,13 @@
   }
 
   .btn.ghost,
-  .btn--ghost,
-  .btn--secondary,
-  .btn-secondary {
+  .btn--secondary {
     color: #60a5fa;
     border-color: #334155;
   }
 
   .btn.ghost:hover,
-  .btn--ghost:hover,
-  .btn--secondary:hover,
-  .btn-secondary:hover {
+  .btn--secondary:hover {
     background: rgba(96, 165, 250, 0.08);
   }
 }

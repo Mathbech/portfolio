@@ -45,7 +45,6 @@ export const projectsDetails = {
     status: { label: 'En production', level: 'prod' }, // wip|done|paused|prod
     stack: ['Symfony', 'Twig', 'MySQL', 'Webpack', 'Docker'],
     links: [
-      // { label: 'GitHub', url: '...' },
       { label: 'Site vitrine', url: 'https://i-topo.com' },
     ],
 

@@ -1,38 +1,12 @@
-<script setup>
-const props = defineProps({
-  line: {
-    type: String,
-    // ► Message centré “projets”, pas de promesse de presta
-    default: "Envie d’en savoir plus sur mes projets ?"
-  },
-  projectsHref: {
-    type: String,
-    default: "/projects" // adapte si ta route diffère
-  },
-  contactHref: {
-    type: String,
-    default: "/contact"
-  },
-  githubHref: {
-    type: String,
-    // ton GitHub
-    default: "https://github.com/Mathbech"
-  },
-  // Si tu veux masquer/afficher certains boutons
-  showProjects: { type: Boolean, default: true },
-  showGithub:   { type: Boolean, default: true },
-  showContact:  { type: Boolean, default: true },
-})
-</script>
+<script setup></script>
 
 <template>
   <section class="cta" aria-labelledby="contact-cta-title">
-    <h2 id="contact-cta-title">{{ props.line }}</h2>
+    <h2 id="contact-cta-title">Envie d'en savoir plus sur mes projets ?</h2>
 
     <div class="actions">
       <RouterLink
-        v-if="props.showProjects"
-        :to="props.projectsHref"
+        to="/projects"
         class="btn btn--primary"
         aria-label="Voir mes projets"
       >
@@ -40,8 +14,7 @@ const props = defineProps({
       </RouterLink>
 
       <a
-        v-if="props.showGithub"
-        :href="props.githubHref"
+        href="https://github.com/Mathbech"
         target="_blank"
         rel="noopener"
         class="btn btn--secondary"
@@ -54,8 +27,8 @@ const props = defineProps({
       </a>
     </div>
 
-    <p v-if="props.showContact" class="subtext">
-      Une question ? <RouterLink :to="props.contactHref" class="link">Contactez-moi</RouterLink>
+    <p class="subtext">
+      Une question ? <RouterLink to="/contact" class="link">Contactez-moi</RouterLink>
     </p>
   </section>
 </template>

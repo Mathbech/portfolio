@@ -7,7 +7,7 @@ import { timelineItems } from '@/data/timelineData.js'
 import { sortTimeline } from '@/utils/timeline'
 import { skills } from '@/data/competences.js'
 
-const events = sortTimeline(timelineItems, 'desc')
+const events = sortTimeline(timelineItems)
 </script>
 
 <template>

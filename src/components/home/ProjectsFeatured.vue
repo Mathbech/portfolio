@@ -1,5 +1,5 @@
 <script setup>
-import { featuredProjects } from '@/data/projects'
+import { featuredProjects } from '@/data/allProjects'
 import ProjectCard from './ProjectCard.vue'
 </script>
 

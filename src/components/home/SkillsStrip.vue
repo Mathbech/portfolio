@@ -1,16 +1,5 @@
 <script setup>
-const skills = [
-    { label: 'Symfony' },
-    { label: 'API Platform' },
-    { label: 'Flutter' },
-    { label: 'Node.js' },
-    { label: 'MySQL/MariaDB' },
-    { label: 'Docker' },
-    { label: 'AWS' },
-    { label: 'Apache' },
-    { label: 'Git' },
-    { label: 'Discord js' }
-]
+import { homeSkills as skills } from '@/data/competences'
 </script>
 
 <template>
