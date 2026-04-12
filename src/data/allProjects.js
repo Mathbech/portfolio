@@ -79,7 +79,7 @@ export const projects = [
     title: 'Migration réseau Halary Migliori',
     category: 'Entreprise',
     context: 'Projet pro',
-    description: "Migration du réseau d'une entreprise d'une vingtaine de postes, configuration de switchs et firewall, mise en place de VLANs, et câblage de la baie réseau.",
+    description: "Migration du réseau d'une entreprise d'une vingtaine de postes, configuration de switchs et firewall, mise en place de VLANs, mise en place des points d'accès, mise en place d'un VPN intersite, et câblage de la baie réseau.",
     stack: ['Ubiquiti', 'VLAN', 'TCP/IP'],
     details: 'network_halary_mig',
   },
