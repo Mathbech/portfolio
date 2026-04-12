@@ -5,16 +5,13 @@ export const projectsDetails = {
     subtitle: "Gestion de stock pour l'impression 3D",
     status: { label: 'En cours', level: 'wip' }, // wip|done|paused|prod
     stack: ['Symfony', 'Twig', 'MySQL', 'Webpack', 'Docker'],
-    links: [
-      // { label: 'GitHub', url: '...' },
-      { label: 'Site vitrine', url: 'https://filamentgestion.fr' },
-    ],
+    links: [{ label: 'Site vitrine', url: 'https://filamentgestion.fr' }],
 
     sections: [
       {
         title: 'Contexte',
         content:
-          "Filamentgestion est un projet personnel réalisé pour mon examen du BTS puis repris de zéro pour un développement plus propre avec pour objectif de le transformer en SaaS.",
+          'Filamentgestion est un projet personnel réalisé pour mon examen du BTS puis repris de zéro pour un développement plus propre avec pour objectif de le transformer en SaaS.',
       },
       {
         title: 'État du projet',
@@ -22,17 +19,17 @@ export const projectsDetails = {
           "Le projet est actuellement en développement et de test auprès de quelques utilisateurs. Une version bêta publique est prévue prochainement, suivie d'une version commerciale.",
       },
       {
-        title: "Description du projet",
+        title: 'Description du projet',
         content:
           "FilamentGestion est une application web destinée à aider les utilisateurs d'imprimantes 3D à gérer leur stock de filaments, imprimantes et impressions. Elle permet de suivre la consommation de filament par impression, de gérer les alertes de stock faible, et d'avoir une vue d'ensemble sur l'état des Bobines.",
       },
       {
         title: 'Prochaines étapes',
         list: [
-          "Prospection pour recruter des testeurs",
-          "Phase de tests utilisateurs et collecte de retours",
-          "Analyse des retours et corrections itératives",
-          "Validation du modèle économique / tarification",
+          'Prospection pour recruter des testeurs',
+          'Phase de tests utilisateurs et collecte de retours',
+          'Analyse des retours et corrections itératives',
+          'Validation du modèle économique / tarification',
           "Monter l'auto‑entreprise si le projet prend",
         ],
       },
@@ -42,13 +39,10 @@ export const projectsDetails = {
   itopo: {
     slug: 'itopo',
     title: 'i-Topo',
-    subtitle: "Gestion de photos de chantiers",
+    subtitle: 'Gestion de photos de chantiers',
     status: { label: 'En production', level: 'prod' }, // wip|done|paused|prod
     stack: ['Symfony', 'Twig', 'MySQL', 'Webpack', 'Docker'],
-    links: [
-      // { label: 'GitHub', url: '...' },
-      { label: 'Site vitrine', url: 'https://i-topo.com' },
-    ],
+    links: [{ label: 'Site vitrine', url: 'https://i-topo.com' }],
 
     sections: [
       {
@@ -59,12 +53,12 @@ export const projectsDetails = {
       {
         title: 'État du projet',
         content:
-          "Le projet est actuellement en production et utilisé par de nombreux professionnels du TP pour la gestion de leurs chantiers.",
+          'Le projet est actuellement en production et utilisé par de nombreux professionnels du TP pour la gestion de leurs chantiers.',
       },
       {
-        title: "Description du projet",
+        title: 'Description du projet',
         content:
-          "i-Topo est une application web destinée à aider les professionnels du TP à gérer leurs photos géolocalisées de chantiers. Elle permet de centraliser, organiser et partager les photos de manière efficace.",
+          'i-Topo est une application web destinée à aider les professionnels du TP à gérer leurs photos géolocalisées de chantiers. Elle permet de centraliser, organiser et partager les photos de manière efficace.',
       },
     ],
   },
@@ -75,9 +69,7 @@ export const projectsDetails = {
     subtitle: 'Bot Discord multi-fonctions',
     status: { label: 'En production', level: 'prod' }, // wip|done|paused|prod
     stack: ['Node.js', 'Discord.js', 'MariaDB'],
-    links: [
-      { label: 'Site web', url: 'https://multitask.bebech.fr' },
-    ],
+    links: [{ label: 'Site web', url: 'https://multitask.bebech.fr' }],
     sections: [
       {
         title: 'Contexte',
@@ -87,10 +79,10 @@ export const projectsDetails = {
       {
         title: 'État du projet',
         content:
-          "Le bot est actuellement en production et utilisé par plusieurs serveurs Discord pour diverses fonctionnalités.",
+          'Le bot est actuellement en production et utilisé par plusieurs serveurs Discord pour diverses fonctionnalités.',
       },
       {
-        title: "Description du projet",
+        title: 'Description du projet',
         content:
           "MultitaskBot est un bot Discord offrant une multitude de fonctionnalités telles que la modération, des commandes amusantes, l'attribution automatique de rôles, la gestion de salons vocaux privés, et bien plus encore.",
       },
@@ -115,13 +107,38 @@ export const projectsDetails = {
       },
       {
         title: 'État du projet',
-        content:
-          "Le projet a été achevé et présenté lors de mon examen de bachelor CDA.",
+        content: 'Le projet a été achevé et présenté lors de mon examen de bachelor CDA.',
       },
       {
-        title: "Description du projet",
+        title: 'Description du projet',
         content:
           "Beaup'orientation est une application web et mobile permettant la gestion de courses d'orientation. Elle inclut une API Symfony pour la gestion des données et une application mobile Flutter pour les utilisateurs finaux.",
+      },
+    ],
+  },
+
+  network_halary_mig: {
+    slug: 'network_halary_mig',
+    title: 'Migration réseau Halary Migliori',
+    subtitle: "Migration et configuration du réseau d'entreprise",
+    status: { label: 'Terminé (maintenance)', level: 'done' },
+    stack: ['Ubiquiti', 'VLAN', 'TCP/IP', 'Firewall', 'VPN'],
+    links: [],
+    sections: [
+      {
+        title: 'Contexte',
+        content:
+          "Ce projet a été réalisé dans le cadre de mon travail chez Lije Technologies, pour une entreprise du groupement d'entreprises auquel elle appartient."
+      },
+      {
+        title: 'État du projet',
+        content:
+          'Le projet a été achevé avec succès, avec une migration complète du réseau et une configuration optimisée.',
+      },
+      {
+        title: 'Description du projet',
+        content:
+          "La mission consistait à migrer le réseau de l'entreprise, en configurant les switchs et firewall, en mettant en place des VLANs, des points d'accès, un VPN intersite, et en câblant la baie réseau pour assurer une connectivité fiable et sécurisée.",
       },
     ],
   },

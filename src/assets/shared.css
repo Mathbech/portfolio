@@ -1,0 +1,90 @@
+/* Utilitaires de styles réutilisables */
+.surface-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 1.1rem;
+  box-shadow: var(--shadow-md);
+}
+
+.section-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  color: var(--accent-2);
+  font-weight: 800;
+  margin: 0 0 0.2rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  border-radius: 0.85rem;
+  border: 1px solid var(--btn-border);
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--text);
+  background: var(--btn-bg);
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-muted);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn.primary,
+.btn--primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: #f8fafc;
+  border-color: var(--accent);
+}
+
+.btn.primary:hover,
+.btn--primary:hover {
+  background: linear-gradient(135deg, var(--accent-hover), var(--accent-active));
+}
+
+.btn.ghost,
+.btn--secondary {
+  background: transparent;
+  color: var(--accent-hover);
+  border-color: var(--accent-tint);
+}
+
+.btn.ghost:hover,
+.btn--secondary:hover {
+  background: var(--accent-hover-bg);
+}

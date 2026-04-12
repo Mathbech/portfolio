@@ -1,0 +1,41 @@
+.cta {
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.6rem;
+  background: var(--highlight-bg);
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.35;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.subtext {
+  margin-top: 0.6rem;
+  color: var(--muted);
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

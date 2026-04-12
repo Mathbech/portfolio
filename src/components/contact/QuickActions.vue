@@ -24,20 +24,19 @@
 import { computed, ref } from 'vue'
 import { email, defaultSubject, siteUrl, person } from '@/data/contact'
 
-const mailtoHref = computed(() =>
-  `mailto:${email}?subject=${encodeURIComponent(defaultSubject)}`
-)
+const mailtoHref = computed(() => `mailto:${email}?subject=${encodeURIComponent(defaultSubject)}`)
 
 // vCard téléchargeable
-const vcard = computed(() => (
-`BEGIN:VCARD
+const vcard = computed(
+  () =>
+    `BEGIN:VCARD
 VERSION:3.0
 N:${person.lastName};${person.firstName};;;
 FN:${person.firstName} ${person.lastName}
 EMAIL;TYPE=work:${email}
 URL:${siteUrl}
-END:VCARD`
-))
+END:VCARD`,
+)
 const vcardHref = computed(() => `data:text/vcard;charset=utf-8,${encodeURIComponent(vcard.value)}`)
 
 // Copier l'email
