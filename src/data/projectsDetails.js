@@ -116,4 +116,30 @@ export const projectsDetails = {
       },
     ],
   },
+
+  network_halary_mig: {
+    slug: 'network_halary_mig',
+    title: 'Migration réseau Halary Migliori',
+    subtitle: "Migration et configuration du réseau d'entreprise",
+    status: { label: 'Terminé (maintenance)', level: 'done' },
+    stack: ['Ubiquiti', 'VLAN', 'TCP/IP', 'Firewall', 'VPN'],
+    links: [],
+    sections: [
+      {
+        title: 'Contexte',
+        content:
+          "Ce projet a été réalisé dans le cadre de mon travail chez Lije Technologies, pour une entreprise du groupement d'entreprises auquel elle appartient."
+      },
+      {
+        title: 'État du projet',
+        content:
+          'Le projet a été achevé avec succès, avec une migration complète du réseau et une configuration optimisée.',
+      },
+      {
+        title: 'Description du projet',
+        content:
+          "La mission consistait à migrer le réseau de l'entreprise, en configurant les switchs et firewall, en mettant en place des VLANs, des points d'accès, un VPN intersite, et en câblant la baie réseau pour assurer une connectivité fiable et sécurisée.",
+      },
+    ],
+  },
 }
