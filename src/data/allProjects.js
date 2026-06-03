@@ -1,6 +1,6 @@
 import itopoCover from '@/assets/images/itopo-cover.png'
 import beaupCover from '@/assets/images/beaup-cover.png'
-import filamentCover from '@/assets/images/filament-cover.png'
+import filamentCover from '@/assets/images/filament-cover.jpg'
 import multitaskCover from '@/assets/images/multitask-cover.png'
 import postfixCover from '@/assets/images/postfix-cover.jpeg'
 
