@@ -8,6 +8,7 @@ const props = defineProps({
   cover: String,
   tech: { type: Array, default: () => [] },
   slug: String,
+  link: String,
 })
 
 const router = useRouter()
@@ -33,9 +34,19 @@ const goToDetails = () => {
       <h3 class="title">{{ props.title }}</h3>
       <p class="context">{{ props.context }}</p>
       <p class="desc">{{ props.description }}</p>
-      <ul class="tech">
-        <li v-for="t in props.tech" :key="t">{{ t }}</li>
+      <ul class="tech tag-list">
+        <li v-for="t in props.tech" :key="t" class="tag">{{ t }}</li>
       </ul>
+      <div v-if="props.link" class="actions" @click.stop @keydown.enter.stop @keydown.space.stop>
+        <a
+          :href="props.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          :aria-label="props.link.includes('github') ? 'Ouvrir le dépôt GitHub' : 'Ouvrir le site'"
+        >
+          {{ props.link.includes('github') ? 'Voir le repo' : 'Voir le site' }}
+        </a>
+      </div>
     </div>
   </article>
 </template>

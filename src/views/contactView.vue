@@ -122,7 +122,7 @@
 import { computed, onMounted, onBeforeUnmount } from 'vue'
 import QuickActions from '@/components/contact/QuickActions.vue'
 import { email, defaultSubject, links, siteUrl, person, filamentGestion } from '@/data/contact'
-import '@/assets/contact.css'
+import '@/styles/contact.css'
 
 /* JSON-LD SEO (injection <head>) */
 const jsonLd = computed(() =>

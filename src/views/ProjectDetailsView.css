@@ -166,16 +166,6 @@
   gap: 8px;
 }
 
-.chip {
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid var(--border-light);
-  background: var(--surface);
-  font-weight: 700;
-  color: var(--text);
-}
-
 .links {
   margin: 0;
   padding-left: 16px;
