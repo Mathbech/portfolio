@@ -6,6 +6,22 @@ import postfixCover from '@/assets/images/postfix-cover.jpeg'
 
 export const projects = [
   {
+    id: 'filament',
+    slug: 'filamentgestion',
+    title: 'FilamentGestion',
+    category: 'Personnel',
+    context: 'Projet cours/perso/pro',
+    description:
+      "Application de gestion de stocks pour l'impression 3D, avec suivi des bobines, imprimantes et impressions.",
+    stack: ['Symfony', 'Twig', 'Webpack', 'MariaDB', 'Docker'],
+    image: filamentCover,
+    link: 'https://filamentgestion.fr',
+    details: 'filamentgestion',
+    featured: true,
+    featuredTech: ['Symfony', 'Docker', 'MariaDB'],
+    featuredDescription: 'Gestion de stocks pour impression 3D — en cours de commercialisation.',
+  },
+  {
     id: 'itopo',
     slug: 'itopo',
     title: 'i-Topo',
@@ -34,22 +50,6 @@ export const projects = [
     image: beaupCover,
     link: 'https://github.com/Mathbech/BeaupOrientation-symfony',
     details: 'beauporientation',
-  },
-  {
-    id: 'filament',
-    slug: 'filamentgestion',
-    title: 'FilamentGestion',
-    category: 'Personnel',
-    context: 'Projet cours/perso/pro',
-    description:
-      "Application de gestion de stocks pour l'impression 3D, avec suivi des bobines, imprimantes et impressions.",
-    stack: ['Symfony', 'Twig', 'Webpack', 'MariaDB', 'Docker'],
-    image: filamentCover,
-    link: 'https://filamentgestion.fr',
-    details: 'filamentgestion',
-    featured: true,
-    featuredTech: ['Symfony', 'Docker', 'MariaDB'],
-    featuredDescription: 'Gestion de stocks pour impression 3D — en cours de commercialisation.',
   },
   {
     id: 'multitask',
