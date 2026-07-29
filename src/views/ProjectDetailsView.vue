@@ -59,7 +59,7 @@ const project = computed(() => projectsDetails[slug.value])
           <div class="metaRow">
             <span class="metaLabel">Stack</span>
             <div class="chips">
-              <span v-for="t in project.stack" :key="t" class="chip">{{ t }}</span>
+              <span v-for="t in project.stack" :key="t" class="tag">{{ t }}</span>
             </div>
           </div>
 
