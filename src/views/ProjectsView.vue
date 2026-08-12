@@ -5,34 +5,24 @@
         <p class="eyebrow">Projets</p>
         <div>
           <h1>Projets réalisés</h1>
-          <p class="intro">Sélection de projets réalisés en contexte professionnel, scolaire et personnel.</p>
+          <p class="intro">
+            Sélection de projets réalisés en contexte professionnel, scolaire et personnel.
+          </p>
         </div>
       </header>
 
       <div class="projects-grid">
-        <div v-for="project in projects" :key="project.id" class="project-card">
-          <div class="thumb">
-            <img :src="project.image" :alt="project.title" loading="lazy" />
-          </div>
-
-          <h2>{{ project.title }}</h2>
-          <p>{{ project.description }}</p>
-
-          <ul class="stack">
-            <li v-for="tech in project.stack" :key="tech">{{ tech }}</li>
-          </ul>
-
-          <div v-if="project.details" class="actions">
-            <router-link :to="{ name: 'project-details', params: { slug: project.details } }">Voir les
-              détails</router-link>
-          </div>
-          <div v-if="project.link" class="actions">
-            <a :href="project.link" target="_blank" rel="noopener noreferrer"
-              :aria-label="project.link.includes('github') ? 'Ouvrir le dépôt GitHub' : 'Ouvrir le site'">
-              {{ project.link.includes('github') ? 'Voir le repo' : 'Voir le site' }}
-            </a>
-          </div>
-        </div>
+        <ProjectCard
+          v-for="project in projects"
+          :key="project.id"
+          :slug="project.details"
+          :title="project.title"
+          :description="project.description"
+          :context="project.context"
+          :cover="project.image"
+          :tech="project.stack"
+          :link="project.link"
+        />
       </div>
     </div>
   </section>
@@ -40,4 +30,5 @@
 
 <script setup>
 import { projects } from '@/data/allProjects.js'
+import ProjectCard from '@/components/home/ProjectCard.vue'
 </script>

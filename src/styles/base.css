@@ -1,0 +1,167 @@
+:root {
+  --page-bg: linear-gradient(180deg, #f8fafc, #eef2ff);
+  --panel: rgba(255, 255, 255, 0.9);
+  --border: #e5e7eb;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #2563eb;
+  --accent-2: #0ea5e9;
+  --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+
+  --accent-hover: #1d4ed8;
+  --accent-active: #1e40af;
+  --accent-tint: #bfdbfe;
+  --accent-tint-bg: #d7e3f4;
+  --accent-hover-bg: rgba(37, 99, 235, 0.08);
+  --accent-glow: rgba(37, 99, 235, 0.12);
+
+  --surface: #f8fafc;
+  --surface-alt: #f1f5f9;
+  --border-light: #e2e8f0;
+  --border-muted: #cbd5e1;
+  --text-dark: #334155;
+  --muted-2: #64748b;
+
+  --highlight-bg: linear-gradient(135deg, #ecfeff, #eef2ff);
+  --highlight-border: #bae6fd;
+  --focus-ring: #2563eb;
+  --focus-shadow: 0 18px 36px rgba(37, 99, 235, 0.16);
+
+  --btn-bg: linear-gradient(180deg, #ffffff, #f8fafc);
+  --btn-border: #d7dde5;
+
+  --shadow-sm: 0 14px 30px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 16px 32px rgba(15, 23, 42, 0.06);
+  --shadow-hover: 0 16px 36px rgba(15, 23, 42, 0.12);
+
+  --badge-success-bg: #d1fae5;
+  --badge-success-text: #065f46;
+  --badge-success-border: #34d399;
+  --badge-warning-bg: #fef9c3;
+  --badge-warning-text: #854d0e;
+  --badge-warning-border: #facc15;
+  --badge-info-bg: #e0f2fe;
+  --badge-info-text: #075985;
+  --badge-info-border: #38bdf8;
+
+  --status-prod-border: #22c55e;
+  --status-prod-text: #166534;
+  --status-prod-bg: rgba(34, 197, 94, 0.14);
+  --status-wip-border: #facc15;
+  --status-wip-text: #854d0e;
+  --status-wip-bg: rgba(250, 204, 21, 0.16);
+  --status-paused-border: #cbd5e1;
+  --status-paused-text: #475569;
+  --status-paused-bg: rgba(226, 232, 240, 0.4);
+  --status-done-border: #60a5fa;
+  --status-done-text: #1d4ed8;
+  --status-done-bg: rgba(96, 165, 250, 0.16);
+}
+
+[data-theme='dark'] {
+  --page-bg: linear-gradient(180deg, #0b1220, #0f172a);
+  --panel: rgba(15, 23, 42, 0.85);
+  --border: #1f2937;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #60a5fa;
+  --accent-2: #38bdf8;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+
+  --accent-hover: #60a5fa;
+  --accent-active: #3b82f6;
+  --accent-tint: #334155;
+  --accent-tint-bg: #1f2937;
+  --accent-hover-bg: rgba(96, 165, 250, 0.08);
+  --accent-glow: rgba(96, 165, 250, 0.18);
+
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-alt: rgba(255, 255, 255, 0.04);
+  --border-light: #1f2937;
+  --border-muted: #334155;
+  --text-dark: #cbd5e1;
+  --muted-2: #94a3b8;
+
+  --highlight-bg: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(37, 99, 235, 0.12));
+  --highlight-border: #1e3a8a;
+  --focus-ring: #60a5fa;
+  --focus-shadow: 0 20px 40px rgba(96, 165, 250, 0.2);
+
+  --btn-bg: linear-gradient(180deg, #0f172a, #0b1220);
+  --btn-border: #1f2937;
+
+  --shadow-sm: 0 14px 30px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 16px 32px rgba(0, 0, 0, 0.35);
+  --shadow-hover: 0 16px 36px rgba(0, 0, 0, 0.45);
+
+  --badge-success-bg: rgba(16, 185, 129, 0.14);
+  --badge-success-text: #34d399;
+  --badge-success-border: rgba(16, 185, 129, 0.4);
+  --badge-warning-bg: rgba(250, 204, 21, 0.14);
+  --badge-warning-text: #fbbf24;
+  --badge-warning-border: rgba(250, 204, 21, 0.35);
+  --badge-info-bg: rgba(56, 189, 248, 0.15);
+  --badge-info-text: #38bdf8;
+  --badge-info-border: rgba(56, 189, 248, 0.35);
+
+  --status-prod-border: #22c55e;
+  --status-prod-text: #34d399;
+  --status-prod-bg: rgba(34, 197, 94, 0.14);
+  --status-wip-border: rgba(250, 204, 21, 0.35);
+  --status-wip-text: #fbbf24;
+  --status-wip-bg: rgba(250, 204, 21, 0.14);
+  --status-paused-border: #334155;
+  --status-paused-text: #94a3b8;
+  --status-paused-bg: rgba(255, 255, 255, 0.04);
+  --status-done-border: rgba(96, 165, 250, 0.35);
+  --status-done-text: #60a5fa;
+  --status-done-bg: rgba(96, 165, 250, 0.14);
+
+  --contact-bg:
+    radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.18), transparent 32%),
+    radial-gradient(circle at 80% 0%, rgba(248, 113, 113, 0.16), transparent 30%),
+    linear-gradient(135deg, #0b1220, #0f172a);
+  --hero-bg:
+    radial-gradient(circle at 15% 20%, rgba(14, 165, 233, 0.22), transparent 34%),
+    radial-gradient(circle at 80% 0%, rgba(99, 102, 241, 0.16), transparent 30%),
+    linear-gradient(135deg, #0b1220, #0f172a);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text);
+  background: var(--page-bg);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}

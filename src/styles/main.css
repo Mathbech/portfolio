@@ -1,0 +1,24 @@
+@import './base.css';
+@import './shared.css';
+@import './projects.css';
+@import './layout.css';
+
+/* Assure que tout prend bien la hauteur dispo */
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: transparent;
+  }
+}
