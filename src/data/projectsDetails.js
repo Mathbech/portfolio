@@ -4,7 +4,7 @@ export const projectsDetails = {
     title: 'FilamentGestion',
     subtitle: "Gestion de stock pour l'impression 3D",
     status: { label: 'En cours', level: 'wip' }, // wip|done|paused|prod
-    stack: ['Symfony', 'Twig', 'MySQL', 'Webpack', 'Docker'],
+    stack: ['Symfony', 'Twig', 'MySQL', 'Webpack', 'Docker', 'AWS', 'FrankenPHP'],
     links: [{ label: 'Site vitrine', url: 'https://filamentgestion.fr' }],
 
     sections: [

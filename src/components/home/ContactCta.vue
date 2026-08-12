@@ -5,7 +5,7 @@
     <h2 id="contact-cta-title">Envie d'en savoir plus sur mes projets ?</h2>
 
     <div class="actions">
-      <RouterLink to="/projects" class="btn btn--primary" aria-label="Voir mes projets">
+      <RouterLink to="/projects" class="btn btn-primary" aria-label="Voir mes projets">
         Voir mes projets
       </RouterLink>
 

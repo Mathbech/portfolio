@@ -37,7 +37,8 @@ src/
 │   ├── contact/     # QuickActions
 │   └── common/      # BaseContainer (wrapper sémantique dynamique)
 ├── views/           # Pages (HomeView, AboutView, ProjectsView, contactView, ProjectDetailsView)
-├── data/            # Données statiques JS (projects, skills, timeline, contact…)
+├── composables/     # useTheme.js (thème clair/sombre, singleton)
+├── data/            # Données statiques JS (allProjects, projectsDetails, competences, timelineData, contact)
 ├── utils/           # Helpers (timeline.ts)
 ├── router/          # Configuration des routes
 ├── main.js          # Point d'entrée
@@ -89,8 +90,8 @@ src/
 
 ## Theming
 
-- Dark mode via `@media (prefers-color-scheme: dark)` (pas de toggle manuel)
-- Variables CSS dans `:root` et surcharge dans le media query dark
+- **Toggle manuel** clair/sombre via `src/composables/useTheme.js` : préférence stockée en `localStorage` (`theme-preference`), appliquée par l'attribut `data-theme` sur `<html>`, avec repli sur `prefers-color-scheme` si aucune préférence stockée
+- Variables CSS dans `:root` / `[data-theme='dark']` — tout nouveau style doit utiliser ces variables, jamais de couleur en dur
 - Classes utilitaires globales : `.surface-card`, `.section-shell`, `.container`, `.btn`, `.pill`, `.eyebrow`
 
 ## Alias d'import
@@ -103,3 +104,13 @@ src/
 - Hébergé sur serveur Apache (`.htaccess` dans `public/`)
 - SEO : JSON-LD (structured data) injecté côté client sur la page contact
 - Node requis : `^20.19.0 || >=22.12.0`
+- Branche principale : `dev`
+
+## Project Investigation Method
+
+1. Bug de contenu (projet manquant, texte faux, mauvaise date) → chercher dans `src/data/` d'abord, pas dans les composants : les vues ne font que consommer ces objets.
+2. Bug d'affichage → identifier le composant par sa classe CSS (kebab-case BEM-like) via grep, puis ouvrir la paire `.vue` + `.css` du même dossier.
+3. Bug de thème → `useTheme.js` (localStorage + `data-theme`) et les variables CSS ; tester les DEUX thèmes après toute modification de style.
+4. Ajout d'un projet au portfolio : ajouter l'entrée dans `allProjects.js` ET `projectsDetails.js` (slug identique — c'est la clé de la route `/project/:slug`), plus l'image de couverture dans `assets/images/`.
+5. Validation, dans l'ordre : `npm run lint` → `npm run type-check` → `npm run build`. Les trois doivent passer ; pas de tests unitaires.
+6. Respecter Prettier (pas de point-virgule, single quotes) — le lint échoue sinon.
