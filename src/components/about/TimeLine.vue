@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import DurationBadge from '@/components/common/DurationBadge.vue'
+
 const props = defineProps<{ items: { year: string; title: string; desc?: string }[] }>()
 </script>
 
@@ -7,7 +9,10 @@ const props = defineProps<{ items: { year: string; title: string; desc?: string 
     <h2>Parcours</h2>
     <ol>
       <li v-for="(e, i) in props.items" :key="i" class="timeline-item">
-        <div class="year">{{ e.year }}</div>
+        <div class="year">
+          {{ e.year }}
+          <DurationBadge :period="e.year" />
+        </div>
         <div class="content">
           <h3>{{ e.title }}</h3>
           <p v-if="e.desc">{{ e.desc }}</p>

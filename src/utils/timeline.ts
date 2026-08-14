@@ -9,6 +9,7 @@ export type Item = { year: string; title: string; desc?: string }
  * - "Juin 2023"
  */
 const PRESENT_SENTINEL = 9999 * 12 + 12
+const RANGE_SEPARATOR = /\s*[–—-]\s*/
 
 const MONTHS_FR: Record<string, number> = {
   janvier: 1,
@@ -54,6 +55,120 @@ function extractMonth(raw: string): number | undefined {
   return undefined
 }
 
+/**
+ * Extrait un jour du mois si présent (ex. "12 juin 2023"). Retourne undefined
+ * si aucun jour explicite n'est trouvé (cas courant : "Juin 2023", "2023").
+ */
+function extractDay(raw: string): number | undefined {
+  const plain = stripDiacritics(raw.trim().toLowerCase())
+  const monthNames = Object.keys(MONTHS_FR).join('|')
+  const m = new RegExp(String.raw`\b(\d{1,2})\s+(?:${monthNames})\b`).exec(plain)
+  if (!m) return undefined
+  const d = parseInt(m[1], 10)
+  return d >= 1 && d <= 31 ? d : undefined
+}
+
+function lastDayOfMonth(year: number, month: number): number {
+  return new Date(year, month, 0).getDate()
+}
+
+type DatePoint = { date: Date; hasDay: boolean }
+
+/**
+ * Construit une date pour une borne de période. Quand le jour n'est pas
+ * explicite, la borne de fin pointe sur le 1er jour du mois SUIVANT (borne
+ * exclusive), pour que "Juin 2023" ou "2023" couvrent bien le mois/l'année
+ * entier·ère dans le calcul de durée.
+ */
+function parseDatePoint(raw: string, position: 'start' | 'end'): DatePoint | undefined {
+  const year = extractYear(raw)
+  if (!year) return undefined
+  const month = extractMonth(raw) ?? (position === 'start' ? 1 : 12)
+  const day = extractDay(raw)
+  if (day !== undefined) return { date: new Date(year, month - 1, day), hasDay: true }
+  const monthIndex = position === 'start' ? month - 1 : month
+  return { date: new Date(year, monthIndex, 1), hasDay: false }
+}
+
+/**
+ * Calcule la durée d'une période au format "year" (ex. "12 juin 2023 - 20 juin 2023",
+ * "2023 - Aujourd'hui"). Retourne undefined si la période ne peut pas être
+ * déterminée (pas d'année identifiable).
+ */
+export function parseDurationRange(input: string): { start: Date; end: Date } | undefined {
+  const parts = input.split(RANGE_SEPARATOR)
+
+  if (parts.length === 1) {
+    if (tokenIsPresent(parts[0])) return undefined
+    const start = parseDatePoint(parts[0], 'start')
+    const end = parseDatePoint(parts[0], 'end')
+    if (!start || !end) return undefined
+    return { start: start.date, end: end.date }
+  }
+
+  const [leftRaw, rightRaw] = [parts[0], parts.slice(1).join(' - ')]
+
+  if (tokenIsPresent(rightRaw)) {
+    const startPoint = parseDatePoint(leftRaw, 'start')
+    if (!startPoint) return undefined
+    return { start: startPoint.date, end: new Date() }
+  }
+
+  const rightYear = extractYear(rightRaw)
+  const leftYear = extractYear(leftRaw) ?? rightYear
+  if (!leftYear) return undefined
+
+  const leftRawWithYear = extractYear(leftRaw) ? leftRaw : `${leftRaw} ${leftYear}`
+  const rightRawWithYear = rightYear ? rightRaw : `${rightRaw} ${leftYear}`
+
+  const startPoint = parseDatePoint(leftRawWithYear, 'start')
+  const endPoint = parseDatePoint(rightRawWithYear, 'end')
+
+  if (!startPoint || !endPoint) return undefined
+  if (startPoint.date > endPoint.date) return { start: endPoint.date, end: startPoint.date }
+  return { start: startPoint.date, end: endPoint.date }
+}
+
+/**
+ * Formate une durée en "X an(s) Y mois", "X mois Y jour(s)" ou "X jour(s)" en
+ * ne gardant que les deux unités les plus significatives. Retourne undefined
+ * si la durée est nulle ou indéterminable.
+ */
+export function formatDuration(year: string): string | undefined {
+  const range = parseDurationRange(year)
+  if (!range) return undefined
+
+  let { start, end } = range
+  if (start > end) [start, end] = [end, start]
+
+  let years = end.getFullYear() - start.getFullYear()
+  let months = end.getMonth() - start.getMonth()
+  let days = end.getDate() - start.getDate()
+
+  if (days < 0) {
+    months -= 1
+    days += lastDayOfMonth(end.getFullYear(), end.getMonth())
+  }
+  if (months < 0) {
+    years -= 1
+    months += 12
+  }
+
+  const units: [number, string][] = [
+    [years, years > 1 ? 'ans' : 'an'],
+    [months, 'mois'],
+    [days, days > 1 ? 'jours' : 'jour'],
+  ]
+
+  const nonZero = units.filter(([value]) => value > 0)
+  if (nonZero.length === 0) return undefined
+
+  return nonZero
+    .slice(0, 2)
+    .map(([value, label]) => `${value} ${label}`)
+    .join(' ')
+}
+
 function toAbsMonth(year: number, month: number) {
   return year * 12 + month
 }
@@ -61,7 +176,7 @@ function toAbsMonth(year: number, month: number) {
 type Parsed = { start: number; end: number }
 
 function parseYearMonthRange(input: string): Parsed {
-  const parts = input.split(/\s*[–—-]\s*/)
+  const parts = input.split(RANGE_SEPARATOR)
 
   if (parts.length === 1 && tokenIsPresent(parts[0])) {
     return { start: PRESENT_SENTINEL, end: PRESENT_SENTINEL }
